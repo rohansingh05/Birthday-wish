@@ -1,0 +1,1244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>For My Amazing Sister ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      background: #f6f0e7;
+      color: #3d3530;
+      overflow-x: hidden;
+    }
+
+    /* Paper texture */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0.12;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      max-width: 1080px;
+      margin: auto;
+      padding: 24px 28px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #6f4b3e;
+    }
+
+    .music-btn {
+      border: 1px solid #d6c4b3;
+      background: #fffaf3;
+      color: #59483e;
+
+      padding: 10px 17px;
+      border-radius: 9px;
+
+      cursor: pointer;
+
+      box-shadow: 2px 3px 0 #d8c5b3;
+
+      transition: 0.2s;
+      font-weight: 600;
+    }
+
+    .music-btn:hover {
+      transform: translate(-1px, -1px);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 86vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 55px 20px 80px;
+
+      position: relative;
+    }
+
+    .hero-content {
+      width: min(780px, 100%);
+
+      text-align: center;
+
+      background: #fffaf2;
+
+      padding: 65px 55px 60px;
+
+      border: 1px solid #e3d5c5;
+
+      box-shadow: 8px 10px 0 #dfcfbd;
+
+      transform: rotate(-0.5deg);
+
+      position: relative;
+    }
+
+    /* Tape */
+    .hero-content::after {
+      content: "";
+
+      position: absolute;
+
+      left: 50%;
+      top: -17px;
+
+      width: 105px;
+      height: 31px;
+
+      transform: translateX(-50%) rotate(-2deg);
+
+      background: #e9d7a9;
+
+      opacity: 0.72;
+    }
+
+    .gift {
+      font-size: 58px;
+      margin-bottom: 20px;
+    }
+
+    .small-title {
+      font-size: 13px;
+      letter-spacing: 3px;
+
+      color: #a05f55;
+
+      font-weight: 700;
+
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+
+      font-weight: 400;
+
+      font-size: clamp(44px, 7vw, 76px);
+
+      line-height: 1.08;
+
+      margin: 10px 0 20px;
+
+      color: #4d3a33;
+    }
+
+    .gradient-text {
+      color: #a34f57;
+
+      background: none;
+
+      -webkit-text-fill-color: initial;
+    }
+
+    .hero p {
+      max-width: 570px;
+
+      margin: auto;
+
+      font-size: 17px;
+
+      line-height: 1.8;
+
+      color: #74675f;
+    }
+
+    .open-btn {
+      margin-top: 30px;
+
+      padding: 14px 24px;
+
+      border: 1px solid #b98278;
+
+      border-radius: 8px;
+
+      background: #a95c60;
+
+      color: white;
+
+      font-size: 16px;
+
+      cursor: pointer;
+
+      box-shadow: 3px 4px 0 #7f4b4c;
+
+      transition: 0.2s;
+    }
+
+    .open-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       SURPRISE
+    ========================= */
+
+    #surprise {
+      display: none;
+    }
+
+    .show {
+      display: block !important;
+    }
+
+    section {
+      padding: 90px 20px;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* =========================
+       SECTION TITLES
+    ========================= */
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-title p {
+      color: #a05f55;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 9px;
+    }
+
+    .section-title h2 {
+      font-family: Georgia, serif;
+
+      font-size: clamp(34px, 5vw, 48px);
+
+      font-weight: 400;
+
+      color: #493a34;
+    }
+
+    /* =========================
+       LETTER
+    ========================= */
+
+    .letter-box {
+      max-width: 760px;
+
+      margin: auto;
+
+      background: #fffdf8;
+
+      padding: 50px 55px;
+
+      border: 1px solid #e1d4c4;
+
+      box-shadow: 5px 7px 0 #ded0bf;
+
+      line-height: 1.9;
+
+      font-size: 17px;
+
+      position: relative;
+    }
+
+    .letter-box::before {
+      content: "";
+
+      position: absolute;
+
+      top: 14px;
+      left: 50%;
+
+      width: 80px;
+      height: 7px;
+
+      transform: translateX(-50%);
+
+      background: #d9c6a4;
+
+      opacity: 0.7;
+    }
+
+    .letter-icon {
+      text-align: center;
+
+      font-size: 39px;
+
+      margin-bottom: 12px;
+    }
+
+    .letter-box h2 {
+      font-family: Georgia, serif;
+      font-weight: 400;
+    }
+
+    .letter-box p {
+      margin-bottom: 18px;
+    }
+
+    .signature {
+      text-align: right;
+
+      color: #9a5755;
+
+      font-family: cursive;
+
+      font-size: 21px;
+    }
+
+    /* =========================
+       REASONS
+    ========================= */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 18px;
+
+      max-width: 850px;
+
+      margin: auto;
+    }
+
+    .card {
+      background: #fffaf2;
+
+      padding: 27px 28px;
+
+      border: 1px solid #e2d4c3;
+
+      box-shadow: 3px 4px 0 #dfd0be;
+
+      position: relative;
+
+      transition: 0.2s;
+    }
+
+    .card:nth-child(1) {
+      transform: rotate(-0.7deg);
+    }
+
+    .card:nth-child(2) {
+      transform: rotate(0.6deg);
+    }
+
+    .card:nth-child(3) {
+      transform: rotate(0.5deg);
+    }
+
+    .card:nth-child(4) {
+      transform: rotate(-0.4deg);
+    }
+
+    .card:hover {
+      transform: translateY(-4px) rotate(0);
+    }
+
+    .card .icon {
+      font-size: 31px;
+
+      margin-bottom: 8px;
+    }
+
+    .card h3 {
+      font-family: Georgia, serif;
+
+      font-weight: 400;
+
+      font-size: 22px;
+
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #756960;
+
+      line-height: 1.7;
+    }
+
+    /* =========================
+       MEMORIES
+    ========================= */
+
+    .memories {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 20px;
+
+      max-width: 900px;
+
+      margin: auto;
+    }
+
+    .memory {
+      background: white;
+
+      padding: 9px 9px 30px;
+
+      border: 1px solid #d9cec0;
+
+      box-shadow: 2px 4px 0 #d7cabc;
+
+      transform: rotate(-1.2deg);
+    }
+
+    .memory:nth-child(2) {
+      transform: rotate(1.5deg);
+    }
+
+    .memory:nth-child(3) {
+      transform: rotate(-0.4deg);
+    }
+
+    .memory:nth-child(4) {
+      transform: rotate(1deg);
+    }
+
+    .memory img {
+      width: 100%;
+
+      aspect-ratio: 1;
+
+      object-fit: cover;
+
+      display: block;
+
+      filter: saturate(0.9);
+    }
+
+    .memory::after {
+      content: "memory";
+
+      display: block;
+
+      text-align: center;
+
+      margin-top: 8px;
+
+      font-family: cursive;
+
+      color: #89786d;
+
+      font-size: 15px;
+    }
+
+    /* =========================
+       WISH
+    ========================= */
+
+    .wish-box {
+      max-width: 820px;
+
+      margin: auto;
+
+      padding: 60px 45px;
+
+      text-align: center;
+
+      color: #fff8f0;
+
+      background: #765a50;
+
+      border-radius: 2px;
+
+      box-shadow: 8px 9px 0 #cdb9a4;
+
+      position: relative;
+    }
+
+    .wish-box::before,
+    .wish-box::after {
+      content: "";
+
+      position: absolute;
+
+      width: 70px;
+      height: 20px;
+
+      background: #e6d4ad;
+
+      opacity: 0.8;
+    }
+
+    .wish-box::before {
+      left: -12px;
+      top: 18px;
+
+      transform: rotate(-7deg);
+    }
+
+    .wish-box::after {
+      right: -12px;
+      bottom: 18px;
+
+      transform: rotate(-7deg);
+    }
+
+    .wish-box .star {
+      font-size: 38px;
+    }
+
+    .wish-box h2 {
+      font-family: Georgia, serif;
+
+      font-weight: 400;
+
+      font-size: clamp(36px, 5vw, 50px);
+
+      margin: 15px 0 20px;
+    }
+
+    .wish-box p {
+      font-size: 18px;
+
+      line-height: 1.8;
+
+      max-width: 680px;
+
+      margin: auto;
+    }
+
+    /* =========================
+       FINAL
+    ========================= */
+
+    .final {
+      min-height: 70vh;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+    }
+
+    .final-heart {
+      font-size: 70px;
+    }
+
+    .final h2 {
+      font-family: Georgia, serif;
+
+      font-weight: 400;
+
+      font-size: clamp(42px, 6vw, 68px);
+
+      margin: 18px 0;
+    }
+
+    .final p {
+      max-width: 620px;
+
+      margin: auto;
+
+      color: #70645d;
+
+      font-size: 18px;
+
+      line-height: 1.8;
+    }
+
+    .love-text {
+      margin-top: 25px;
+
+      font-family: cursive;
+
+      font-size: 30px;
+
+      color: #a04f57;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      text-align: center;
+
+      padding: 30px;
+
+      color: #8b7d72;
+
+      border-top: 1px dashed #d1c2b1;
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================= */
+
+    .fade {
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* Floating hearts */
+
+    .heart {
+      position: fixed;
+
+      bottom: -50px;
+
+      font-size: 18px;
+
+      pointer-events: none;
+
+      animation: floatHeart 8s linear infinite;
+
+      opacity: 0.45;
+
+      z-index: 1;
+    }
+
+    @keyframes floatHeart {
+      0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+      }
+
+      12% {
+        opacity: 0.55;
+      }
+
+      88% {
+        opacity: 0.55;
+      }
+
+      100% {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+      }
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+      .hero-content {
+        padding: 50px 28px;
+
+        box-shadow: 5px 7px 0 #dfcfbd;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .memories {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+      }
+
+      .letter-box {
+        padding: 40px 28px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      nav {
+        padding: 18px 15px;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .hero {
+        padding: 35px 15px 65px;
+      }
+
+      .hero-content {
+        padding: 48px 22px;
+      }
+
+      section {
+        padding: 65px 15px;
+      }
+
+      .wish-box {
+        padding: 45px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       MUSIC
+  ========================= -->
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="audio1.mp3" type="audio/mpeg" />
+  </audio>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+
+    <div class="logo">
+      ❤️ For My Sister
+    </div>
+
+    <button
+      class="music-btn"
+      onclick="toggleMusic()"
+      id="musicButton"
+    >
+      🎵 Music
+    </button>
+
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="gift">
+        🎁
+      </div>
+
+      <div class="small-title">
+        A LITTLE SURPRISE FOR YOU...
+      </div>
+
+      <h1>
+        To My
+        <span class="gradient-text">
+          Amazing Sister ❤️
+        </span>
+      </h1>
+
+      <p>
+        I made something special just for you.
+        Because you deserve more than just a simple wish.
+      </p>
+
+      <button
+        class="open-btn"
+        onclick="openSurprise()"
+      >
+        🎁 Open Your Surprise ✨
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SURPRISE CONTENT
+  ========================= -->
+
+  <div id="surprise">
+
+
+    <!-- =========================
+         LETTER
+    ========================= -->
+
+    <section id="letter" class="fade">
+
+      <div class="container">
+
+        <div class="letter-box">
+
+          <div class="letter-icon">
+            💌
+          </div>
+
+          <h2 style="text-align:center; margin-bottom:30px;">
+            A Little Letter For You
+          </h2>
+
+          <p>
+            Dear Didi,
+          </p>
+
+          <p>
+            Sometimes I don't say it enough, but I want you
+            to know how grateful I am to have you in my life.
+          </p>
+
+          <p>
+            You have always been someone I can look up to.
+            From giving me advice to supporting me during
+            difficult moments, you have always been there.
+          </p>
+
+          <p>
+            We may fight, argue and annoy each other sometimes 😂,
+            but at the end of the day, you will always be one
+            of the most important people in my life.
+          </p>
+
+          <p>
+            I hope you always stay happy, keep smiling and
+            achieve everything you dream about.
+          </p>
+
+          <p>
+            Thank you for being the amazing sister that you are. ❤️
+          </p>
+
+          <div class="signature">
+            — Your Little Brother 🫶
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         REASONS
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <p>
+            JUST A FEW REASONS
+          </p>
+
+          <h2>
+            Why You're Special ✨
+          </h2>
+
+        </div>
+
+
+        <div class="cards">
+
+          <div class="card">
+
+            <div class="icon">
+              ❤️
+            </div>
+
+            <h3>
+              Always There
+            </h3>
+
+            <p>
+              Thank you for always being there
+              whenever I need you.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="icon">
+              🌸
+            </div>
+
+            <h3>
+              My Inspiration
+            </h3>
+
+            <p>
+              You inspire me to become a
+              better person every day.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="icon">
+              😊
+            </div>
+
+            <h3>
+              Best Memories
+            </h3>
+
+            <p>
+              Some of my happiest memories
+              are the moments we shared.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="icon">
+              🫶
+            </div>
+
+            <h3>
+              Forever Special
+            </h3>
+
+            <p>
+              No matter how much we grow,
+              you will always be special to me.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MEMORIES
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <p>
+            OUR BEAUTIFUL MOMENTS
+          </p>
+
+          <h2>
+            Our Memories 📸
+          </h2>
+
+          <p style="
+            color:#777;
+            margin-top:15px;
+            letter-spacing:0;
+            font-weight:400;
+          ">
+            Add your favorite photos below.
+          </p>
+
+        </div>
+
+
+        <div class="memories">
+
+          <div class="memory">
+            <img
+              src="photo1.jpeg"
+              alt="Memory"
+            />
+          </div>
+
+          <div class="memory">
+            <img
+              src="photo2.jpeg"
+              alt="Memory"
+            />
+          </div>
+
+          <div class="memory">
+            <img
+              src="photo3.jpeg"
+              alt="Memory"
+            />
+          </div>
+
+          <div class="memory">
+            <img
+              src="photo4.jpeg"
+              alt="Memory"
+            />
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WISH
+    ========================= -->
+
+    <section>
+
+      <div class="wish-box">
+
+        <div class="star">
+          ⭐
+        </div>
+
+        <h2>
+          My Wish For You ❤️
+        </h2>
+
+        <p>
+          May your life always be filled with happiness,
+          success, love and beautiful moments.
+          May every dream you have come true.
+          And may you always have a reason to smile.
+        </p>
+
+        <p style="margin-top:25px;font-weight:bold;">
+          Stay happy. Stay amazing. Stay you. 🌸
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL MESSAGE
+    ========================= -->
+
+    <section class="final">
+
+      <div>
+
+        <div class="final-heart">
+          💖
+        </div>
+
+        <h2>
+          One Last Thing...
+        </h2>
+
+        <p>
+          No matter where life takes us,
+          no matter how old we become,
+          you'll always be my amazing elder sister.
+        </p>
+
+        <div class="love-text">
+          I Love You, Didi! ❤️
+        </div>
+
+        <p style="margin-top:15px;">
+          Forever & Always 🫶
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+      Made with ❤️ specially for my amazing sister.
+    </footer>
+
+  </div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /* =========================
+       OPEN SURPRISE
+    ========================= */
+
+    function openSurprise() {
+
+      const surprise =
+        document.getElementById("surprise");
+
+      surprise.classList.add("show");
+
+      setTimeout(function () {
+
+        document
+          .getElementById("letter")
+          .scrollIntoView({
+            behavior: "smooth"
+          });
+
+      }, 200);
+
+      createHearts();
+    }
+
+
+    /* =========================
+       FLOATING HEARTS
+    ========================= */
+
+    function createHearts() {
+
+      for (let i = 0; i < 25; i++) {
+
+        const heart =
+          document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerHTML = "❤️";
+
+        heart.style.left =
+          Math.random() * 100 + "%";
+
+        heart.style.animationDelay =
+          Math.random() * 5 + "s";
+
+        heart.style.animationDuration =
+          5 + Math.random() * 5 + "s";
+
+        document.body.appendChild(heart);
+      }
+    }
+
+
+    /* =========================
+       MUSIC
+    ========================= */
+
+    const music =
+      document.getElementById("bgMusic");
+
+    const musicButton =
+      document.getElementById("musicButton");
+
+
+    function setMusicButton(isOn) {
+
+      musicButton.innerHTML =
+        isOn
+          ? "🔊 Music On"
+          : "🎵 Music Off";
+    }
+
+
+    function toggleMusic() {
+
+      if (music.paused) {
+
+        music.play()
+          .then(() => {
+
+            setMusicButton(true);
+
+          })
+          .catch(() => {
+
+            setMusicButton(false);
+
+          });
+
+      } else {
+
+        music.pause();
+
+        setMusicButton(false);
+      }
+    }
+
+
+    /* =========================
+       AUTO MUSIC ON PAGE LOAD
+    ========================= */
+
+    window.addEventListener("load", () => {
+
+      music.play()
+        .then(() => {
+
+          setMusicButton(true);
+
+        })
+        .catch(() => {
+
+          /*
+            Some browsers block audible
+            autoplay until the visitor
+            interacts with the page.
+          */
+
+          setMusicButton(false);
+
+        });
+
+    });
+
+  </script>
+
+</body>
+</html>
